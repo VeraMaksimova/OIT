@@ -1,0 +1,8 @@
+<!DOCTYPE information [
+<!ELEMENT information (univer,spes,name_of_un,ball,plan,city)>
+<!ELEMENT univer (#PCDATA)>
+<!ELEMENT spes (#PCDATA)>
+<!ELEMENT name_of_un (#PCDATA)>
+<!ELEMENT plan (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+]>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dom1{
+            fill: cornflowerblue;
+        }
+        .dom2{
+            fill: darkcyan;
+        }
+        .dom3{
+            fill:darkseagreen ;
+        }
+        .dom4{
+            fill: deeppink;
+        }
+        .dom5{
+            fill: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+    <svg width = "1000" height = "800">
+       
+            <path id="home" d="M100 59.375l-18.75-18.75v-28.125h-12.5v15.625l-18.75-18.75-50 50v3.125h12.5v31.25h31.25v-18.75h12.5v18.75h31.25v-31.25h12.5z"/>
+        <use xlink:href ="#home" class="dom1" x="80" y ="50" transform="rotate(25 50 30),scale(2) "/>
+        <use xlink:href ="#home" class="dom2" x="200" y ="40" transform="rotate(-20 120 70),scale(0.3)"/>
+        <use xlink:href ="#home" class="dom3" x="700" y ="120" transform="rotate(40 120 70)"/>
+        <use xlink:href ="#home" class="dom4" x="500" y ="50" transform="rotate(60 20 70),scale(0.5)"/>
+        <use xlink:href ="#home" class="dom5" x="800" y ="50" transform="rotate(20 20 70),"/>
+      </svg>
+</body>
+</html>

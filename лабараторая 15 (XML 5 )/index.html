@@ -1,0 +1,48 @@
+<html>
+<body>
+   <h1>Ученик</h1>
+   <div>
+      <b>Имя:</b> <span id="NAME"></span><br />
+      <b>Год рождения:</b> <span id="YEAR"></span><br />
+      <b>Балл:</b> <span id="BALL"></span>
+   </div>
+   <h1>Ученик 2</h1>
+   <div>
+      <b>Имя:</b> <span id="NAME_1"></span><br />
+      <b>Год рождения:</b> <span id="YEAR_1"></span><br />
+      <b>Балл:</b> <span id="BALL_1"></span>
+   </div>
+
+   <script>
+      txt = '<uchenik>';
+      txt =  txt + '<name>Маргарита Лилова</name>';
+      txt =  txt +'<year>2001</year>';
+      txt =   txt +  '<ball_1>8</ball_1>';
+      txt =  txt + '<name>Арсений Вердеревский</name>';
+      txt =  txt +'<year>2000</year>';
+      txt =   txt +  '<ball_1>6</ball_1>';
+      txt = txt + '</uchenik>';
+
+      if (window.DOMParser)
+      {
+         parser = new DOMParser();
+         xmlDoc = parser.parseFromString(txt,"text/xml");
+      }
+      else // Internet Explorer
+      {
+         xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+         xmlDoc.async = false;
+         xmlDoc.loadXML(txt);
+      }
+
+      document.getElementById("NAME").innerHTML = xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+      document.getElementById("YEAR").innerHTML = xmlDoc.getElementsByTagName("year")[0].childNodes[0].nodeValue;
+      document.getElementById("BALL").innerHTML = xmlDoc.getElementsByTagName("ball_1")[0].childNodes[0].nodeValue;
+
+      document.getElementById("NAME_1").innerHTML = xmlDoc.getElementsByTagName("name")[1].childNodes[0].nodeValue;
+      document.getElementById("YEAR_1").innerHTML = xmlDoc.getElementsByTagName("year")[1].childNodes[0].nodeValue;
+      document.getElementById("BALL_1").innerHTML = xmlDoc.getElementsByTagName("ball_1")[1].childNodes[0].nodeValue;
+      
+   </script>
+</body>
+</html>

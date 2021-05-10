@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css.css" rel="stylesheet">
+    <script  type="text/javascript">
+   function GET() {
+    navigator.geolocation.getCurrentPosition(look);
+}
+    function look(position) {
+    document.write("Широта:" + position.coords.latitude + "<br/>");
+    document.write("Долгота:" + position.coords.longitude); 
+    }
+
+    </script>
+</head>
+<body>
+    <!--Задание 1. Создать новую веб-страницу. Вставит заголовок в центре страницы «Я, ФИО, изучаю HTML5». Подсветить ФИО с по-мощью тега <mark>.-->
+        <h1>Я, <mark>Максимова Вера Владимировна</mark>, изучаю HTML5</h1>
+    <!--Задание 2. Вставить аудио и видео файлы. -->
+    <video  controls poster   >
+        <source src="Cat.mp4"    type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+    </video>
+    <audio src="mus.mp3" controls="controls"> </audio>
+    <!--Задание 3. Определить свои координаты с помощью геолокации.-->
+    <p>MAGIC BUTTON</p>
+<input type="button" value="K" onclick = "GET()">
+
+</body>
+</html>

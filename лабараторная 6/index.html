@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛАБА 6</title>
+   
+    <style>
+        button:hover{
+            background-color: rgba(202, 120, 202, 0.867);
+            color: aliceblue;
+        }
+        .but_1, .but_2, .but_3, .but_4,  .but_5, .but_6{
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 20px;
+            color: dimgrey;
+            font-family: monospace;
+            border: 2px solid dimgrey;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .but_1{
+            background-color: antiquewhite;
+        }
+        .but_2{
+            background-color:  antiquewhite;
+        }
+        .but_3{
+            background-color: darkkhaki;
+        }
+        .but_4{
+            background-color: darkkhaki;
+        }
+        .but_6{
+            background-color: darkkhaki;
+        }
+        table{
+           border-collapse: collapse;
+           text-align: center;
+        
+           
+        }
+        td{
+            border:2px solid rgb(122, 104, 187);
+            padding: 0px 20px 0 20px;
+            font-size: 15px;
+           
+        }
+
+    </style>
+</head>
+<body>
+    <button class = "but_1" onclick="win_open()">КНОПКА 1</button>
+    <button class = "but_2" onclick="win_close()">ЗАКРЫВАЮЩАЯ КНОПКА</button>
+    <button class = "but_3" id = "but_3" onclick="win1_open()" name="okno" >КНОПКА 2</button>
+    <button class = "but_6" id="tyt" onclick="win1_text()">ВВЕДИТЕ ТЕКСТ</button>
+    <button class = "but_4" onclick="win1_close()"> ЗАКРЫВАЮЩАЯ КНОПКА</button>
+    <script  src="scripts.js"></script>
+</body>
+</html>

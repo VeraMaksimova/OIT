@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+   $("#but").click(function(){
+      $("#sun").animate({left:1320},1400);
+      $("#sun").animate({left: 10},1400);
+      $("#sun").animate({left:1320},1400);
+      $("#sun").animate({right:10},1400);
+   });
+});
+
+    </script>
+</head>
+<body>
+    <!--Задание 2. Создать программу на JS, организующую движение картинки по прямой линии. -->
+    <img id="sun" src="../sun.jpg" width="200px" style="position: absolute;">
+    <button id="but" style="margin-top: 20%;">организовать движение</button>
+    
+</body>
+</html>

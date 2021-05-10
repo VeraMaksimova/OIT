@@ -1,0 +1,10 @@
+img {
+    width: 100px;
+}
+
+#task_5{
+    width: 100px;
+    transition: width 0.2s ease-out 0.1s;
+
+}
+

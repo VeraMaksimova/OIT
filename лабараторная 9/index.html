@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        img{
+            width: 120px;
+        }
+        p{
+            font-size: 20px;
+            font-family: 'Pacifico', cursive;
+            color: rgb(55, 146, 116);
+        }
+        button{
+            color: rgb(32, 42, 100);
+            background-color: rgba(236, 188, 57, 0.671);
+            border: 2px solid rgb(32, 42, 100);
+            width: 100px;
+            height: 50px;
+            margin-top: 150px;
+            z-index: 100;
+        }
+    </style>
+ 
+</head>
+<body>
+    <!--Задание 1. Создать программу на JS, позволяющую перетащить мышью область текста и картинку-->
+    <img id="img_1" src="kit.jfif" >
+    <p id = "text">Текст текст текст</p>
+<hr>
+    <!--Задание 2 Создать программу на JS, организующую движение картинки по прямой линии-->
+    <img src="kot.jfif" id="kot">
+    <button  onclick="move_cat_1()">Начать движение</button>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

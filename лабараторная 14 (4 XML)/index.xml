@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.XSL"?>
+<?xml-model href="zxc.xsd"?>
+<information>
+
+<uchenik>
+<name>Маргарита Лилова</name>
+<year>2001</year>
+<ball_1>8</ball_1>
+
+</uchenik>
+
+<uchenik>
+<name>Иван Иванов</name>
+<year>2000</year>
+<ball_1>6</ball_1>
+
+</uchenik>
+
+<uchenik>
+<name>Анастасия Павловская</name>
+<year>2003</year>
+<ball_1>5</ball_1>
+
+</uchenik>
+
+</information>

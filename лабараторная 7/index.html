@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    
+ 
+</head>
+<body>
+    
+        <form>
+            <textarea placeholder="Faculty of . . ." id="ta" value="kk"></textarea>
+            <div class="user">
+                <input id = "name" placeholder="Name" class="name" type= "text">
+                <input id="surname" placeholder="Surname" class="surname" type= "text">
+            </div>
+                
+            <div class="select">
+                <select id="sel">
+                    <option>ISiT</option>
+                    <option>POIT</option>
+                    <option>DEIVI</option>
+                    <option>PO</option>
+                </select>
+            </div>
+            
+            <div class="kurs">
+                <p>COURSE</p>
+                <input  class="radio radio_1" id="radio_1" type="radio" name="kurs" value="k_1"> 
+                <label id = "k_1" for="radio_1" class="radio_1_label">1</label>
+                <input   class="radio radio_2" id="radio_2"type="radio" name="kurs" value="k_1"> 
+                <label id = "k_2" for="radio_2" class="radio_2_label">2</label>
+                <input  class="radio radio_3" id="radio_3" type="radio" name="kurs" value="k_1">
+                <label id = "k_3" for="radio_3" class="radio_3_label">3</label>
+                <input   class="radio radio_4" id="radio_4" type="radio" name="kurs" value="k_1">
+                <label id = "k_4" for="radio_4" class="radio_4_label">4</label>
+            </div>
+            <!--CHECKBOX-->
+            <div class="sub">
+                <p>subject</p>
+                <input type="checkbox" id="checkbox_1" class = "checkbox_1 checkbox" name="subject" value="oit">
+                <label id="c_1" for="checkbox_1" class="checkbox_1_label" >Oit</label>
+                <input type="checkbox" id="checkbox_2" name="subject" class = "checkbox_2 checkbox" value="oaip">
+                <label id="c_2" for="checkbox_2" class="checkbox_2_label">Oaip</label>
+                <input type="checkbox" id="checkbox_3" name="subject" class = "checkbox_3 checkbox" value="history">
+                <label  id="c_3" for="checkbox_3" class="checkbox_3_label">History</label>
+                <input type="checkbox" id="checkbox_4" name="subject" class = "checkbox_4 checkbox" value="physics">
+                <label id="c_4" for="checkbox_4" class="checkbox_4_label" >Physics</label>
+                <input type="checkbox" id="checkbox_5" name="subject" class = "checkbox_5 checkbox" value="math">
+                <label id="c_5" for="checkbox_5" class="checkbox_5_label">Math</label>
+            </div>
+               <!--CHECKBOX-->
+            <div class="buttons">
+                <button type="submit">submit</button>
+                <button type="reset">reset</button>
+                <button onclick="pr_1()">print</button>
+            </div>
+        </form> 
+    
+    <!--Задание 2. Создать форму, содержащую элементы (текстовая об-ласть,
+     2 текстовых поля, список, 4 радиокнопки, 5 флажков, команд-ные кнопки). Вид формы представлен ниже. -->
+     <script src="scr.js"></script>
+  
+</body>
+</html>

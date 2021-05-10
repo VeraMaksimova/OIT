@@ -1,0 +1,435 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    height: 1200px;
+    font-family: 'Oswald', sans-serif;
+    background-image: linear-gradient(to top, rgb(180, 72, 199), rgb(185, 81, 187), rgb(191, 89, 176), rgb(196, 98, 164), rgb(202, 106, 152),
+     rgb(207, 115, 140), rgb(213, 123, 129), rgb(218, 132, 117), rgb(224, 140, 105), rgb(229, 149, 93), rgb(235, 157, 82), rgb(240, 166, 70));
+}
+
+/*ПОЗИЦИОНИРОВАНИЕ*/
+form{
+   
+    border: 8px  solid #ffffffa6;
+    margin-top:40px;
+    margin-left: auto;
+    margin-right: auto;
+    display:grid;
+    height: 1000px;
+    width: 600px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+ 
+}
+
+
+textarea{
+    grid-column-start:2;
+    grid-column-end:7;
+    grid-row-start:1;
+    grid-row-end:2;
+    
+   
+}
+
+
+.user{
+    grid-column-start:2;
+    grid-column-end:6;
+    grid-row-start:2;
+    grid-row-end:4;
+}
+
+
+
+.select{
+    grid-column-start:2;
+    grid-column-end:6;
+    grid-row-start:4;
+    grid-row-end:5;
+}
+
+
+.kurs{
+    grid-column-start:2;
+    grid-column-end:6;
+    grid-row-start:6;
+    grid-row-end:7;
+}
+
+
+.sub{
+    grid-column-start:2;
+    grid-column-end:7;
+    grid-row-start:8;
+    grid-row-end:9;
+}
+
+.buttons{
+    grid-column-start:2;
+    grid-column-end:8;
+    grid-row-start:10;
+    grid-row-end:11;
+}
+/*ОФОРМЛЕНИЕ*/
+
+
+textarea{
+    height: 180px; 
+    resize: none;
+    padding:5px;
+    background-color:transparent;
+    margin-top: 15px;
+    border:2px solid  #ffffffa6;
+    color: #ffffff;
+    font-size:25px;
+    outline:none;
+    font-family: 'Oswald', sans-serif;
+    
+}
+textarea:hover {
+    border:2px solid  #ffffff;
+}
+
+textarea::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.726); }
+.name::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.726); }
+.surname::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.726); }
+
+
+.name, .surname{
+    height: 30px;
+    color: #ffffff;
+    background-color: transparent;
+    margin-top: 10px;
+    border:2px solid  #ffffffa6;
+    padding-left: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    outline:none;
+}
+
+
+.name:hover , .surname:hover{
+    border:2px solid  #ffffff;
+}
+
+
+select , option {  
+    background-color: transparent;
+    color: white;
+    font-size:30px;
+    font-family: 'Teko', sans-serif;
+    border:2px solid  #ffffffa6;
+    width: 330px;
+}
+
+select:checked + option:hover{
+    outline: none;
+   
+    
+} 
+
+
+select:checked , option {
+    background-color: rgb(224, 140, 105);
+}
+
+
+option::content{
+    background-color: thistle;
+}
+/*RADIO*/
+
+.kurs{
+    color: #ffffffa6;
+    font-size:30px;
+    font-family: 'Teko', sans-serif;
+    position: relative;
+   
+    border-top:2px solid #ffffffa6 ;
+}
+
+.kurs p {
+    margin-right: 15px;
+}
+
+
+.kurs p:hover{
+    color: #ffffff;
+    transition: background-color 0.2s ease-out 0.5s;
+}
+
+
+.radio{
+    appearance: none;
+    position: relative;
+}
+
+
+.radio:hover{
+    color: #ffffff;
+    transition: background-color 0.2s ease-out 0.5s;
+}
+.radio_1_label:hover, .radio_2_label:hover, .radio_3_label:hover, .radio_4_label:hover{
+    color: #ffffff;
+    transition: background-color 0.2s ease-out 0.5s;
+}
+.radio_1:checked + .radio_1_label{
+    color: #ffffff;
+}
+
+
+.radio_2:checked + .radio_2_label{
+    color: #ffffff;
+}
+
+
+.radio_3:checked + .radio_3_label{
+    color: #ffffff;
+}
+
+
+.radio_4:checked + .radio_4_label{
+    color: #ffffff;
+}
+
+
+.radio_1:checked + .radio_1_label:before{
+    background-color: #ffffff;
+    transition: background-color 0.2s ease-out 0.5s;
+}
+
+
+.radio_2:checked + .radio_2_label:before{
+    background-color: #ffffff;
+    transition: background-color 0.2s ease-out 0.5s;
+}
+
+
+.radio_3:checked + .radio_3_label:before{
+    background-color: #ffffff;
+    transition: background-color 0.2s ease-out 0.5s;
+}
+
+
+.radio_4:checked + .radio_4_label:before{
+    background-color: #ffffff;
+    transition: background-color 0.2s ease-out 0.5s;
+}
+
+
+.radio_1_label, .radio_2_label, .radio_3_label {
+    margin-right: 40px;
+}
+
+
+.radio_1_label::before,.radio_1_label::after {
+   position:absolute;
+   bottom: 15px;
+   left: 20px;
+}
+.radio_2_label::before,.radio_2_label::after {
+    position:absolute;
+    bottom: 15px;
+    left: 78px;
+}
+.radio_3_label::before, .radio_3_label::after{
+    position:absolute;
+    bottom: 15px;
+    left: 136px;
+}
+.radio_4_label::before, .radio_4_label::after{
+    position:absolute;
+    bottom: 15px;
+    left: 192px;
+}
+
+
+.radio_1_label::before,  .radio_2_label::before, .radio_3_label::before, .radio_4_label::before{
+    content:"";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #ffffffa6;
+   
+}
+
+.radio_1_label::after,  .radio_2_label::after, .radio_3_label::after, .radio_4_label::after{
+    content:"";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    opacity:0;
+}
+/*RADIO*/
+/*СCHECKBOX*/
+.sub{   
+    color: #ffffffa6;
+    font-size:30px;
+    font-family: 'Teko', sans-serif;
+    position:relative;
+    border-top: 2px solid #ffffffa6;
+    border-bottom: 2px solid #ffffffa6;
+}
+
+.sub > p{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.sub > p:hover{
+    color:#ffffff;
+}
+
+
+.checkbox{
+    -webkit-appearance: none;
+    appearance: none;
+    position:absolute;
+    margin-bottom: 10px;
+ 
+}
+
+
+.checkbox_1:checked + .checkbox_1_label {
+   color: #ffffff;
+}
+
+
+.checkbox_2:checked + .checkbox_2_label {
+    color: #ffffff;
+}
+
+
+.checkbox_3:checked + .checkbox_3_label {
+    color: #ffffff;
+}
+
+
+.checkbox_4:checked + .checkbox_4_label {
+    color: #ffffff;
+}
+
+
+.checkbox_5:checked + .checkbox_5_label {
+    color: #ffffff;
+}
+
+
+.checkbox_1:checked + .checkbox_1_label::before {
+    background-color: #ffffff;
+    transition:  background-color 0.3s ease-in-out;
+   
+}
+.checkbox_2:checked + .checkbox_2_label::before{
+    background-color: #ffffff;
+    transition:  background-color 0.3s ease-in-out;
+}
+
+.checkbox_3:checked + .checkbox_3_label::before{
+    background-color: #ffffff;
+    transition:  background-color 0.3s ease-in-out;
+}
+
+.checkbox_4:checked + .checkbox_4_label::before{
+    background-color: #ffffff;
+    transition:  background-color 0.3s ease-in-out;
+}
+
+.checkbox_5:checked + .checkbox_5_label::before{
+    background-color: #ffffff;
+    transition:  background-color 0.3s ease-in-out;
+}
+
+
+.checkbox_1_label, .checkbox_2_label, .checkbox_3_label, .checkbox_4_label, .checkbox_5_label {
+    margin-right: 35px;
+}
+
+.checkbox_1_label::before, .checkbox_1_label::after{
+    position: absolute;
+    left: 32px;
+    bottom: 15px;
+}
+.checkbox_2_label::before , .checkbox_2_label::after{
+    position: absolute;
+    left: 105px;
+    bottom: 15px;
+}
+.checkbox_3_label::before , .checkbox_3_label::after{
+    position: absolute;
+    left: 200px;
+    bottom: 15px;
+}
+.checkbox_4_label::before , .checkbox_4_label::after{
+    position: absolute;
+    left: 300px;
+    bottom: 15px;
+}
+.checkbox_5_label::before , .checkbox_5_label::after{
+    position: absolute;
+    left: 380px;
+    bottom: 15px;
+}
+
+
+.checkbox_1_label::before , .checkbox_2_label::before, .checkbox_3_label::before,
+.checkbox_4_label::before, .checkbox_5_label::before{
+    content:"";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #ffffffa6;
+    transition: border 1s ease-out 0.5s;
+    
+}
+
+.checkbox_1_label::after, .checkbox_2_label::after, .checkbox_3_label::after, .checkbox_4_label::after, .checkbox_5_label::after{
+    content:"";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    opacity:0;    
+    
+}
+.checkbox_1_label:hover, .checkbox_2_label:hover, .checkbox_3_label:hover, .checkbox_4_label:hover, .checkbox_5_label:hover{
+    color:#ffffff;
+    transition: color 0.2s ease-in;
+}
+/*СCHECKBOX*/
+
+
+button{  
+    background-color: transparent;
+    border: 2px solid #ffffffa6;
+    text-transform: uppercase;
+    color: #ffffffa6;
+    font-family: 'Teko', sans-serif;
+    font-size:25px;
+    width: 95px;
+    height: 45px;
+    outline:none;
+}
+
+button:not(:last-child){
+    margin-right: 67px;
+}
+button:hover{
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background-color: #ffffff5b;
+    transition: color 0.2s ease-in;
+    transition: border 0.2s ease-in;
+    transition: background-color 0.2s ease-in;
+}

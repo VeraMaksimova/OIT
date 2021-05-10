@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+        $("#but").click(function(){
+        $("#sun").animate({left:100,top:100},400);
+        $("#sun").animate({left:200,top:10},400);
+        $("#sun").animate({left:300,top:100},400);
+        $("#sun").animate({left:400,top:10},400);
+        $("#sun").animate({left:500,top:100},400);
+        $("#sun").animate({left:600,top:10},400);
+        $("#sun").animate({left:700,top:100},400);
+        $("#sun").animate({left:800,top:10},400);
+        $("#sun").animate({left:900,top:100},400);
+        //
+        $("#sun").animate({left:800,top:10},400);
+        $("#sun").animate({left:700,top:100},400);
+        $("#sun").animate({left:600,top:10},400);
+        $("#sun").animate({left:500,top:100},400);
+        $("#sun").animate({left:400,top:10},400);
+        $("#sun").animate({left:300,top:100},400);
+        $("#sun").animate({left:200,top:10},400);
+        $("#sun").animate({left:100,top:100},400);
+        $("#sun").animate({left:5,top:10},400);
+    });
+});
+   
+
+    </script>
+</head>
+<body>
+    <!--Задание 2.Задание 3. Создать программу на JS, организующую движение картинки по кривой линии и возврат ее в исходное состояние.  -->
+    <img id="sun" src="../kard_1.jpg" width="30px" style="position: absolute;">
+    <button  id="but" style="margin-top: 20%;">организовать движение</button>
+    
+</body>
+</html>

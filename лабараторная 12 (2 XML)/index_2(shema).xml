@@ -1,0 +1,28 @@
+<?_xmlversion = "1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<note xmlns="http://msiter.ru"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://msiter.ru information.xsd">
+<information>
+ <univer>
+        <spes>ИСИТ</spes>
+        <name_of_un>Белорусский национальный технический университет</name_of_un>
+        <ball>Балл:322</ball>
+        <plan>План набора:80</plan>
+        <city>город: Минск</city>
+    </univer>
+<univer>
+        <spes>ИСИТ</spes>
+        <name_of_un>УО "Барановичский государственный университет"</name_of_un>
+        <ball>Балл:282</ball>
+        <plan>План набора:65</plan>
+        <city>город:Барановичи</city>
+</univer>
+<univer>
+        <spes>ИСИТ</spes>
+        <name_of_un>"Белорусский государственный технологический университет"</name_of_un>
+        <ball>Балл:302</ball>
+        <plan>План набора:76</plan>
+        <city>город:Минск</city>
+</univer>
+</information>

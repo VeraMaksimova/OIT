@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script  type="text/javascript">
+    function dom(){
+        var can = document.getElementById('dom');
+        var D = can.getContext('2d');
+      
+        // ДОМ
+        D.strokeStyle="#EDED80EF";
+        D.moveTo(10, 300);//90 130
+        D.lineTo(10, 100);//90 40
+        D.lineTo(210, 5);//150 10
+        D.lineTo(410, 100);//210 40
+        D.lineTo(410, 300);//210 130
+        D.lineTo(10, 300);//88 130
+        D.lineWidth = 5; 
+        //   //ТЕНЬ
+        D.shadowOffsetX=5;
+        D.shadowOffsetY=3;
+        D.shadowBlur=5;
+        D.shadowColor='rgb(155, 155, 155)';
+        //ТЕКСТ
+        D.font='20px Lobster';
+        D.fillStyle='#80901d';
+        D.fillText("Maksimova Vera", 210, 290);
+
+        D.stroke();
+        //ГРАДИЕНТ
+        var grad =D.createLinearGradient(10,0,0,100);// 0 0 0 70
+        grad.addColorStop(0.1,'rgba(39, 81, 173, 0.867)');
+        grad.addColorStop(1.0,'rgba(10, 200, 214, 0.867)');
+        D.fillStyle=grad;
+        D.fillRect(80,150,120,60);// 100 50 50 20 
+
+}
+       
+    </script>
+    <style>
+        button{
+            padding: 20px 40px;
+            background-color: darksalmon;
+            border: 2px solid rgb(131, 53, 92);
+            border-radius: 10px;
+            color: white;
+            font-family: 'Lobster', cursive;
+            font-size: 20px;
+            margin-left: 50%;
+        }
+        #dom{
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id = "dom" width="500" height="500" ></canvas>
+    
+    <button type="button"  onclick="dom()">Нарисовать дом</button>
+</body>
+</html>

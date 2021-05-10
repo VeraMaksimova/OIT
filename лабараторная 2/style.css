@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(245, 234, 206);
+}
+
+h1{
+    font-size: 20px;
+    text-align: center;
+    font-family: monospace;
+}
+
+span:nth-child(1){
+    color:palevioletred;
+}
+
+.task{
+    color:rgb(125, 163, 100) ;
+}
+
+input{
+    color:palevioletred;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: monospace;
+    border: 2px solid  rgb(199, 182, 139);
+    border-radius: 10px;
+    background-color:rgba(125, 163, 100, 0.322);
+}
+
+.but{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    width: 80%; /* Ширина таблицы */
+    border: 4px solid rgb(158, 187, 104); /* Рамка вокруг таблицы */
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: monospace;
+    font-size: 20px;
+    color:rgb(238, 141, 193);
+    margin: 20px;
+}
+tr{
+    border: 4px solid rgb(158, 187, 104); /* Рамка вокруг таблицы */
+    border-collapse: collapse;
+}
+
+td,th{
+    border: 4px solid rgb(158, 187, 104); /* Рамка вокруг таблицы */
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}

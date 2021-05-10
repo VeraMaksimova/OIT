@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.XSL"?>
+<?xml-model href="zxc.xsd"?>
+<information>
+<univer>
+<name_of_un>Белорусский национальный технический университет</name_of_un>
+<ball>322</ball>
+<plan>80</plan>
+<city>Минск</city>
+</univer>
+<univer>
+<name_of_un>Белорусский государственный технологический университет</name_of_un>
+<ball>302</ball>
+<plan>76</plan>
+<city>Минск</city>
+</univer>
+<univer>
+<name_of_un>Барановичский государственный университет</name_of_un>
+<ball>282</ball>
+<plan>65</plan>
+<city>Барановичи</city>
+</univer>
+</information>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+ 
+   
+</head>
+<body>
+    <!--1 ЗАДАНИЕ 
+    Создать программу на JS, изменяющую цвет слова в тексте при наведении курсора мыши (событие Onmouseover, свойство style.color).-->
+    <h1 ><span  id="task_1" class="t_1" onmouseover="fun_1()" onmouseout="fun_2()">ТЕКСТ</span> для первого задания </h1>
+
+    <!--2 задание Создать программу на JS, изменяющую размер шрифта слова щелчком мыши (событие Onclick, свойство style.fontSize).-->
+    <h1 id="task_2" onclick="fun_3()">Щелчок</h1>
+    <script src="script.js"></script>
+    <!--3 задание Создать программу на JS замены картинки на другую при щелчке мышью с помощью метода getElementById и свойства src.-->
+    <img id = "task_3" onclick="fun_4()" src="kard_1.jpg">
+    <!--4 Задание Создать программу на JS, заменяющую текст изображением, с использованием метода getElementById и свойства innerHTML.-->
+    <p id="task_4" onclick="fun_5()">Текст для замены </p>
+    <!--Задание 5. Создать эффекты увеличения размера рисунка (свой-ство width) при наведении на него курсора мыши и 
+        возврата к перво-начальному размеру при уходе курсора с рисунка (событие onmouseout)-->
+    <img id="task_5" src="sun.jpg" onmouseout="fun_7()" onmouseover="fun_6()" >
+    <!--Задание 6. Нарисовать цветную рамку произвольного стиля во-круг любого абзаца при двойном щелчке (событие dblclick) на абзац.-->
+    <h1 id="task_6" ondblclick="fun_8()" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sit aperiam voluptas
+         expedita temporibus quo provident, tempora beat
+        ae aliquam facere eligendi blanditiis inventore? Facilis velit tempora 
+        deserunt voluptatum, sunt debitis!</h1>
+</body>
+</html>

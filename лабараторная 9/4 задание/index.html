@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="scr.js" ></script>
+ 
+    <style>
+        #can{
+            width: 400px;
+            height: 400px;
+            color: black;
+          border: 2px solid black;
+            background-size: 400px 400px;
+            
+        }
+       
+    </style>
+</head>
+<body>
+   
+    <canvas width="400" height="400" id="can"></canvas>
+    
+      <form>
+          <div class="radio">
+            <input id ="radio_1" onclick="go_1()" value="t1" name ="laba" type="radio">sin
+            <input id ="radio_2" onclick="go_2()" value="t2"  name ="laba" type="radio">cos
+            <input id ="radio_3" onclick="go_3()" value="t3"  name ="laba" type="radio">x^2
+            <input id ="radio_4" onclick="go_4()" value="t4"  name ="laba" type="radio">x^3
+          </div>
+
+         
+    
+        </form>
+        <select id = "select">
+          <option id="c_1"  value="1">Черный</option>
+          <option   id ="c_2" value ="2">Красный</option>
+          <option id ="c_3" value ="3">Зеленый</option>
+        </select>
+        <button onclick="sub()">color</button>
+     
+
+
+ 
+</body>
+</html>
