@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Задание 1. Напишите коды следующих анимаций для любого примитива (круг, прямоугольник):
+	перемещение по прямой;
+	изменение размера (радиуса);
+	изменение цвета при одновременном перемещении по оси X;
+	изменение толщины обводки.
+-->
+    <svg width="1400" height="1000">
+        <circle cy="60" cx="50" r="50" fill="blue">
+            <animate attributeName="cx" from="200" to="1200"dur="10s"/>
+        </circle>
+        <circle cy="300" cx="100" r="50" fill="red">
+        <animate attributeName="r" from="50" to="80" dur="1s"/>
+        </circle>
+
+        <circle cy="500" cx="100" r="50" fill="yellow">
+            <animate attributeName="cx" from="100" to="1200"dur="10s"/>
+            <animate attributeName="fill" from="yellow" to="blue" dur="10s"/>
+        </circle>
+
+        <circle cy="600" cx="500" r="30" stroke="pink" fill="purple" stroke-width="5">
+            <animate attributeName="stroke-width" from="5" to="20"dur="10s"/>
+          
+        </circle>
+    </svg>
+
+        
+</body>
+</html>

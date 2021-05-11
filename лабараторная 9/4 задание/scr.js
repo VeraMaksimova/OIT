@@ -18,9 +18,9 @@ function sinys(){
 
 function cosin(){
     var y = 200 + 100 * Math.cos(x/20);
-    x = x + 0.2;
+    x = x + 0.1;
  
-    ctx.fillRect(x,y,1.5,2);
+    ctx.fillRect(x,y,1,2);
     time = setTimeout(cosin, 1);
 }
 
@@ -39,8 +39,8 @@ function x_2(){
 
 function x_3(){
    // цвет квадратической параболы
-    ctx.fillRect(200+x*10,200-Math.pow(x,3),1.5,1);
-    x = x + 0.01;
+    ctx.fillRect(200+x*10,200 - Math.pow(x,3),2,1);//x*10
+    x = x + 0.03;
    
     time = setTimeout(x_3, 1);
     
@@ -69,7 +69,10 @@ function sub(){
     var color_b = document.getElementById('c_1');
     var color_r = document.getElementById('c_2');
     var color_g = document.getElementById('c_3');
+    var color_b = document.getElementById('c_4');
     if(color_b.selected)  ctx.fillStyle = "black";//
     if(color_r.selected)  ctx.fillStyle = "red";
     if(color_g.selected)  ctx.fillStyle = "green";
+    if(color_b.selected)  ctx.fillStyle = "blue";
+
 }

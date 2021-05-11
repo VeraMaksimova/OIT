@@ -1,48 +1,82 @@
+<!DOCTYPE html>
 <html>
+<head>
+<meta charset="utf-8">
+<title>XML LAB_5</title>
+<style>
+#allInfo{
+margin: 30px;
+}
+</style>
+</head>
+
 <body>
-   <h1>Ученик</h1>
-   <div>
-      <b>Имя:</b> <span id="NAME"></span><br />
-      <b>Год рождения:</b> <span id="YEAR"></span><br />
-      <b>Балл:</b> <span id="BALL"></span>
-   </div>
-   <h1>Ученик 2</h1>
-   <div>
-      <b>Имя:</b> <span id="NAME_1"></span><br />
-      <b>Год рождения:</b> <span id="YEAR_1"></span><br />
-      <b>Балл:</b> <span id="BALL_1"></span>
-   </div>
+<input type="file" onchange="processFiles(this.files)">
+<select id="opt"></select>
+<div id="allInfo"></div>
+<script>
 
-   <script>
-      txt = '<uchenik>';
-      txt =  txt + '<name>Маргарита Лилова</name>';
-      txt =  txt +'<year>2001</year>';
-      txt =   txt +  '<ball_1>8</ball_1>';
-      txt =  txt + '<name>Арсений Вердеревский</name>';
-      txt =  txt +'<year>2000</year>';
-      txt =   txt +  '<ball_1>6</ball_1>';
-      txt = txt + '</uchenik>';
+function processFiles(files) {
+var file = files[0];
+let xml;
+var reader = new FileReader();
+reader.onload = function (e) {
+xml = e.target.result;
+};
+reader.readAsText(file);
 
-      if (window.DOMParser)
-      {
-         parser = new DOMParser();
-         xmlDoc = parser.parseFromString(txt,"text/xml");
-      }
-      else // Internet Explorer
-      {
-         xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
-         xmlDoc.async = false;
-         xmlDoc.loadXML(txt);
-      }
+setTimeout(() => {
+let xmlDoc;
+if (window.DOMParser) {
+let parser = new DOMParser();
+xmlDoc = parser.parseFromString(xml, "text/xml");
+} // Internet Explorer
+else {
+xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+xmlDoc.async = false;
+xmlDoc.loadXML(txt);
+}
 
-      document.getElementById("NAME").innerHTML = xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
-      document.getElementById("YEAR").innerHTML = xmlDoc.getElementsByTagName("year")[0].childNodes[0].nodeValue;
-      document.getElementById("BALL").innerHTML = xmlDoc.getElementsByTagName("ball_1")[0].childNodes[0].nodeValue;
+let allInfo = document.getElementById("allInfo");
+allInfo.innerHTML = "";
+let opt = document.getElementById("opt");
+opt.innerHTML = "";
+let surname, name, patro, date, city;
+let studentsList = xmlDoc.getElementsByTagName("students");
+studentsList = studentsList[0];
+let person = studentsList.getElementsByTagName("person");
 
-      document.getElementById("NAME_1").innerHTML = xmlDoc.getElementsByTagName("name")[1].childNodes[0].nodeValue;
-      document.getElementById("YEAR_1").innerHTML = xmlDoc.getElementsByTagName("year")[1].childNodes[0].nodeValue;
-      document.getElementById("BALL_1").innerHTML = xmlDoc.getElementsByTagName("ball_1")[1].childNodes[0].nodeValue;
-      
-   </script>
+for(let i = 0; i < person.length; i++){
+newOption = new Option(i+1, i);
+opt.append(newOption);
+}
+
+let showInfo = () => {
+key = opt.value;
+surname = person[key].getElementsByTagName("surname");
+name = person[key].getElementsByTagName("name");
+patro = person[key].getElementsByTagName("patronymic");
+date = person[key].getElementsByTagName("dateofbirth");
+city = person[key].getElementsByTagName("fromcity");
+
+surname = surname[0].innerHTML;
+name = name[0].innerHTML;
+patro = patro[0].innerHTML;
+date = date[0].innerHTML;
+city = city[0].innerHTML;
+
+allInfo.innerHTML = "";
+allInfo.innerHTML += surname + "<br/>" + name + "<br/>" + patro + "<br/>" + date + "<br/>" + city + "<br/><br/>";
+}
+
+showInfo();
+
+opt.onchange = function(){
+showInfo();
+}
+
+}, 10);}
+
+</script>
 </body>
 </html>
